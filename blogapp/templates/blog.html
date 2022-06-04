@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="{% static 'image/x-icon' %}" href="">
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <title>index</title>
+</head>
+  <body>
+    <header>PAGINA DO BLOG</header>
+    <div>
+      <h1>PAGINA BLOG</h1>
+    </div>
+
+    <div class="container">
+      {% for post in posts %}
+      
+        <h2>{{ post.titulo }}</h2>
+        <h2>{{ post.sub_titulo }}</h2>
+        <h2>{{ post.data_do_post }}</h2>
+        <h2>{{ post.conteudo }}</h2>
+        <img src="{{ post.imagem.url }}" alt="">
+
+      {% endfor %}
+
+
+
+    <button type="button" class="btn btn-primary">bootstrap is working</button>
+    <footer></footer>
+    <script src=“{% static 'js/jquery.js' %}”></script>
+    <script src=“{% static 'js/app.js' %}”></script>
+    <script src="{% static 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' %}"></script>
+    <!-- Inclui todos os plugins compilados (abaixo), ou inclua arquivos separadados se necessário -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html>

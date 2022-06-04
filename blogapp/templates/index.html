@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="{% static 'image/x-icon' %}" href="">
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <title>index</title>
+</head>
+  <body>
+    <header>pagina home</header>
+    <div>
+      <h1>PAGINA INDEX.HTML HOME</h1>
+    </div>
+    <button type="button" class="btn btn-primary">bootstrap is working</button>
+    <footer></footer>
+    <script src=“{% static 'js/jquery.js' %}”></script>
+    <script src=“{% static 'js/app.js' %}”></script>
+    <script src="{% static 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js' %}"></script>
+    <!-- Inclui todos os plugins compilados (abaixo), ou inclua arquivos separadados se necessário -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  </body>
+</html>
