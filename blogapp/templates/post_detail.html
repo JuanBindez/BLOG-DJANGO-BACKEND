@@ -8,7 +8,7 @@
   <link rel="shortcut icon" type="{% static 'image/x-icon' %}" href="">
   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-  <title>index</title>
+  <title>index blog</title>
 </head>
   <body>
     <header>PAGINA DO BLOG</header>
@@ -17,15 +17,17 @@
     </div>
 
     <div class="container">
-      {% for post in posts %}
-      
-        <h2>{{ post.titulo }}</h2>
-        <h2>{{ post.sub_titulo }}</h2>
+     
+             {{ post }}
+            <h2>{{ post.titulo }}</h2>
+            <h2>{{ post.sub_titulo }}</h2>
+            <h2>{{ post.data_do_post }}</h2>
+            <h2>{{ post.conteudo }}</h2>
 
-        <li><a href="{% url 'post_detail' post.id %}" class="button">Leia Mais</a></li>
+            <img src="{{ post.imagem.url }}" alt="">
 
-      {% endfor %}
 
+       
 
     <footer></footer>
     <script src=“{% static 'js/jquery.js' %}”></script>
